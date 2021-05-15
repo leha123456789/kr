@@ -7,6 +7,6 @@ int main()
 	Date a;
 	cout << "Year, Month, Day" << endl;
 	Date b;
-	cout << endl << a+b << endl;
+	cout << endl << a << endl;
 	return 0;
 }

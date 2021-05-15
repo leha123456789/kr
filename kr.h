@@ -28,7 +28,7 @@ class Date
 		Date result(m1.year, m1.month, m1.day, mass);
 		return result;
 		}
-			friend ostream& operator<<(ostream &out, Date &ms){
+		friend ostream& operator<<(ostream &out,const Date &ms){
 			for (int i=0; i< ms.year; i++){
 				for (int j=0; j <ms.month; i++){
 					for (int k=0; k < ms.day; i++){
