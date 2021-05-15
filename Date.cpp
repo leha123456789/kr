@@ -4,18 +4,15 @@ using namespace std;
 Date::Date()
 {
 	cout << "Year, Month, Day"<< endl;
-	cin >> y >> m >> d;
-	if (m>12||d>31){
-	throw "Error";
-	}
-	mass = new int[y+m+d];
-	cin >> mass [y+m+d];
+	cin >> year >> month >> day;
+	mass = new int[year+month+day];
+	cin >> mass [year+month+day];
 }
-Date::Date(unsigned int Y,unsigned int M,unsigned int D, int *Mass)
+Date::Date(unsigned int Year,unsigned int Month,unsigned int Day, int *Mass)
 {
-y=Y;
-m=M;
-d=D;
+year=Year;
+month=Month;
+day=Day;
 mass=Mass;
 }
 Date::~Date(){

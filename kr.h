@@ -11,31 +11,32 @@ class Date
 	public:
 		Date();
 		~Date();
-		friend ostream& operator<<(ostream &out, Date &ms){
-		for (int i=0; i< ms.y; i++){
-		for (int j=0; j <ms.m; i++){
-		for (int k=0; k < ms.d; i++){
-		out << m.mass[ms.y+ms.m+ms.d] << "";
-				}
-				out << endl;
-			}
-			return out;
-		}
-		}
+	
 		friend Date operator+ (Date const& m1, Date const& m2){
-		int *mass = new int[m1.y+m1.m+m1.d];
-		for (int i = 0; i < m1.y+m1.m+m1.d; i++){
+		int *mass = new int[m1.year+m1.month+m1.day];
+		for (int i = 0; i < m1.year+m1.month+m1.day; i++){
 		 mass[i]=m1.mass[i]+m2.mass[i];
 		}
-		Data result(m1.y, m1.m, m1.d, mass);
+		Date result(m1.year, m1.month, m1.day, mass);
 		return result;
 		}
 		friend Date operator- (Date const& m1, Date const& m2){
-		int *mass = new int[m1.y+m1.m+m1.d];
-		for (int i = 0; i < m1.y+m1.m+m1.d; i++){
+		int *mass = new int[m1.year+m1.month+m1.day];
+		for (int i = 0; i < m1.year+m1.month+m1.day; i++){
 		 mass[i]=m1.mass[i]-m2.mass[i];
 		}
-		Data result(m1.y, m1.m, m1.d, mass);
+		Date result(m1.year, m1.month, m1.day, mass);
 		return result;
 		}
+			friend ostream& operator<<(ostream &out, Date &ms){
+			for (int i=0; i< ms.year; i++){
+				for (int j=0; j <ms.month; i++){
+					for (int k=0; k < ms.day; i++){
+						out << ms.mass[ms.year+ms.month+ms.day] << "";
+				}
+				out << endl;
+			}
+		}
+		return out;
+	}
 };	
